@@ -1,3 +1,5 @@
+let color = "black";
+
 function populateBoard(size) {
   let board = document.querySelector(".board");
   let squares = board.querySelectorAll("div");
@@ -25,5 +27,9 @@ function changeSize(input) {
 }
 
 function colorSquare() {
-  this.style.backgroundColor = "black";
+  this.style.backgroundColor = color; // Whatever square is hovered over is performing the function
+}
+
+function changeColor(choice) {
+  color = choice;
 }
