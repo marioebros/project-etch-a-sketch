@@ -21,9 +21,10 @@ populateBoard(16);
 
 function changeSize(input) {
   if (input >= 2 && input <= 100) {
+    document.querySelector(".error").style.display = "none";
     populateBoard(input);
   } else {
-    console.log("Too Many Sqaures");
+    document.querySelector(".error").style.display = "flex";
   }
 }
 
@@ -47,11 +48,13 @@ function resetBoard() {
   squares.forEach((div) => (div.style.backgroundColor = "white"));
 }
 
-document.querySelector("body").addEventListener("click", () => {
-  click = !click;
-  if (click) {
-    document.querySelector(".mode").textContent = "Mode: Color";
-  } else {
-    document.querySelector(".mode").textContent = "Mode: Color OFF";
+document.querySelector("body").addEventListener("click", (e) => {
+  if (e.target.tagName != "BUTTON") {
+    click = !click;
+    if (click) {
+      document.querySelector(".mode").textContent = "Mode: Color";
+    } else {
+      document.querySelector(".mode").textContent = "Mode: Color OFF";
+    }
   }
 });

@@ -1,5 +1,119 @@
+/* ------ style.css ------ */
+
+/* ------ Color Palette ------ */
+/*  https://coolors.co/bcc4db-c0a9b0-331832-694d75-6da34d
+    #BCC4DB - Light Periwinkle
+    #C0A9B0 - Black Shadows
+    #331832 - Dark Purple 
+    #694D75 - English Violet
+    #6DA34D - Bud Green
+    #ACACAC - Silver Chalice
+    #080808 - Vampire Black
+*/
+
+/* ------ Global Styles ------ */
+* {
+  font-family: "Expletus Sans", cursive;
+}
+.full-screen {
+  margin: 0;
+}
+.flex-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgba(188, 196, 219, 0.25), #bcc4db);
+}
+
+/* ------ Etch-A-Sketch Board ------ */
 .board {
-  width: 750px;
-  height: 500px;
+  width: 80%;
+  height: 80%;
   display: grid;
+  background-color: white;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgba(51, 24, 50, 0.05), 0.3em 0.3em 1em rgba(0, 0, 0, 0.5);
+}
+.board:hover {
+  cursor: pointer;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  min-height: 300px;
+  width: 60vw;
+  height: 60vw;
+  max-width: 600px;
+  max-height: 600px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: -15px;
+  width: 350px;
+  height: 120px;
+}
+.mode {
+  margin-bottom: 15px;
+}
+
+/* ------ Button Styling ------ */
+.buttons {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+button {
+  padding: 0.75em 1.5em;
+  margin: 0 0.5em 0.5em 0;
+  border-radius: 4em;
+  text-decoration: double;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.2s;
+}
+button:hover {
+  cursor: grab;
+}
+.black {
+  background-color: black;
+  color: white;
+}
+.black:hover {
+  background-color: rgba(0, 0, 0, 75%);
+  color: black;
+}
+.silver {
+  background-color: rgba(128, 128, 128, 0.411);
+  color: black;
+}
+.silver:hover {
+  background-color: rgba(95, 95, 95, 75%);
+  color: white;
+}
+.random {
+  background: linear-gradient(0.25turn, #f65cfc, #ebf8e1, #583cf6);
+}
+.random:hover {
+  background: linear-gradient(0.25turn, #20ff02, #ebf8e1, #aecc03);
+}
+.eraser {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+.eraser:hover {
+  background-color: rgba(255, 255, 255, 75%);
+  color: rgb(255, 255, 255);
+}
+
+/* ------ Size Controls ------ */
+input {
+  width: 50px;
+}
+.error {
+  display: none;
 }
