@@ -52,9 +52,9 @@ document.querySelector("body").addEventListener("click", (e) => {
   if (e.target.tagName != "BUTTON") {
     click = !click;
     if (click) {
-      document.querySelector(".mode").textContent = "Mode: Color";
+      document.querySelector(".mode").textContent = "Color: ON";
     } else {
-      document.querySelector(".mode").textContent = "Mode: Color OFF";
+      document.querySelector(".mode").textContent = "Color: OFF";
     }
   }
 });
