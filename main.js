@@ -27,7 +27,11 @@ function changeSize(input) {
 }
 
 function colorSquare() {
-  this.style.backgroundColor = color; // Whatever square is hovered over is performing the function
+  if (color === "random") {
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+  } else {
+    this.style.backgroundColor = color; // Whatever square is hovered over is performing the function
+  }
 }
 
 function changeColor(choice) {
